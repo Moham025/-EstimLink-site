@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation — EstimLink</title>
+    <meta name="description" content="Guide d'installation et de démarrage rapide de l'add-in Excel EstimLink.">
+    <link rel="icon" type="image/png" href="/assets/icon-32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="nav scrolled" id="nav">
+    <a class="nav-brand" href="/">
+        <img src="/assets/icon-32.png" alt="" width="26" height="26">
+        <span>Estim<em>Link</em></span>
+    </a>
+    <nav class="nav-links" id="nav-links">
+        <a href="/#produit">Produit</a>
+        <a href="/#archicad">ArchiCAD</a>
+        <a href="/#tarifs">Tarification</a>
+        <a href="/docs.html">Docs</a>
+    </nav>
+    <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="/#telecharger">Télécharger</a>
+        <button class="nav-burger" id="nav-burger" aria-label="Menu">☰</button>
+    </div>
+</header>
+
+<main class="doc-wrap">
+    <p class="kicker">Documentation</p>
+    <h1>Démarrer avec EstimLink</h1>
+    <p>Tout ce qu'il faut pour installer l'add-in dans Excel et créer votre premier devis.</p>
+
+    <h2>1. Télécharger le manifeste</h2>
+    <p>
+        EstimLink s'installe via un fichier <em>manifeste</em> (<code>EstimLink-manifest.xml</code>)
+        qui indique à Excel où charger l'add-in.
+    </p>
+    <p style="margin-top:16px;">
+        <a class="btn btn-primary" href="/download/EstimLink-manifest.xml" download="EstimLink-manifest.xml">⬇ Télécharger EstimLink-manifest.xml</a>
+    </p>
+
+    <h2>2. Installer dans Excel sur le web</h2>
+    <ol>
+        <li>Ouvrez un classeur sur <em>excel.office.com</em> (ou office.com → Excel).</li>
+        <li>Onglet <strong>Accueil</strong> → <strong>Compléments</strong> → <strong>Plus de compléments</strong>.</li>
+        <li>Onglet <strong>Mes compléments</strong> → <strong>Charger mon complément</strong> (Upload My Add-in).</li>
+        <li>Sélectionnez le fichier <code>EstimLink-manifest.xml</code> téléchargé, puis validez.</li>
+        <li>L'onglet <strong>Estim Link</strong> apparaît dans le ruban : cliquez sur le bouton pour ouvrir le panneau.</li>
+    </ol>
+
+    <h2>3. Installer dans Excel pour Windows</h2>
+    <p>Sur le poste de travail, Excel charge les compléments personnalisés depuis un <em>catalogue de confiance</em> (dossier partagé) :</p>
+    <ol>
+        <li>Créez un dossier, par exemple <code>C:\EstimLink</code>, et copiez-y le manifeste.</li>
+        <li>Partagez ce dossier : clic droit → <strong>Propriétés</strong> → <strong>Partage</strong> → <strong>Partager</strong> (avec vous-même), et notez le chemin réseau (ex. <code>\\VOTRE-PC\EstimLink</code>).</li>
+        <li>Dans Excel : <strong>Fichier → Options → Centre de gestion de la confidentialité → Paramètres du Centre… → Catalogues de compléments approuvés</strong>.</li>
+        <li>Collez le chemin réseau dans <strong>URL du catalogue</strong>, cliquez sur <strong>Ajouter le catalogue</strong>, cochez <strong>Afficher dans le menu</strong>, puis OK et redémarrez Excel.</li>
+        <li>Ensuite : <strong>Accueil → Compléments → Plus de compléments → Dossier partagé</strong> → sélectionnez <strong>Estim Link</strong> → <strong>Ajouter</strong>.</li>
+    </ol>
+    <div class="doc-callout">
+        <p>💡 Cette manipulation n'est à faire qu'une seule fois. Aux prochains démarrages, EstimLink sera directement disponible dans vos compléments.</p>
+    </div>
+
+    <h2>4. Se connecter</h2>
+    <ol>
+        <li>Ouvrez le panneau <strong>Estim Link</strong> depuis le ruban.</li>
+        <li>Connectez-vous avec <strong>Google</strong> ou créez un compte avec votre email.</li>
+        <li>Vos bibliothèques de prix et projets sont liés à votre compte et vous suivent partout.</li>
+    </ol>
+
+    <h2>5. Premier devis en 3 commandes</h2>
+    <p>Dans le chat du panneau, essayez par exemple :</p>
+    <ul>
+        <li><code>Crée une table DQE pour une villa R+1</code> — l'assistant structure les lots et postes.</li>
+        <li><code>Applique les prix de ma bibliothèque</code> — l'Agent Prix rapproche chaque poste d'un prix unitaire.</li>
+        <li><code>Génère le récapitulatif et convertis en bordereau</code> — totaux, montants en lettres, mise en forme.</li>
+    </ul>
+
+    <h2>6. Connecter ArchiCAD</h2>
+    <p>
+        Depuis l'onglet <strong>ArchiCAD</strong> du panneau, chargez les nomenclatures exportées de votre maquette.
+        EstimLink résout ensuite chaque référence en cascade (correspondance exacte → normalisée → similarité IA)
+        pour injecter les quantités du modèle dans vos postes.
+    </p>
+
+    <h2>Besoin d'aide ?</h2>
+    <p>Écrivez-nous : <a href="mailto:sanou.moham92@gmail.com" style="color:var(--accent);">sanou.moham92@gmail.com</a></p>
+</main>
+
+<footer class="footer">
+    <p class="footer-copy">© 2026 EstimLink. Tous droits réservés.</p>
+</footer>
+
+<script>
+    const burger = document.getElementById('nav-burger');
+    const links = document.getElementById('nav-links');
+    burger.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>
