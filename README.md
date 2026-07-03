@@ -24,6 +24,18 @@ Site 100 % statique — aucun build, aucune dépendance.
 3. Framework preset : **Other** (site statique, pas de commande de build ni de dossier de sortie à configurer).
 4. Déployer. Plus tard, brancher un domaine (ex. `estimlink.com`) dans les settings du projet ; l'add-in reste sur `estim-link-m8bt.vercel.app`.
 
+## Installeurs (GitHub Releases)
+
+Les boutons de téléchargement pointent vers les GitHub Releases de ce repo :
+`https://github.com/Moham025/-EstimLink-site/releases/download/v1.0.0/…`
+
+Pour publier une version :
+1. Compiler les deux installeurs (repo EstimLink-Local, dossier `installer/`) :
+   `EstimLink-Excel-Setup.exe` (~2 Mo) et `EstimLink-Agent-Setup.exe` (~45 Mo).
+2. Sur GitHub → **Releases → Draft a new release** → tag `v1.0.0` (exactement, sinon les liens du site cassent).
+3. Glisser-déposer les deux `.exe` dans la release, puis **Publish**.
+4. Pour une nouvelle version (ex. `v1.1.0`) : créer la release puis mettre à jour les URLs dans `index.html` et `docs.html`.
+
 ## À maintenir
 
 - **Manifeste** : quand `manifest-prod.xml` change dans le projet add-in, recopier la nouvelle version dans `download/EstimLink-manifest.xml`.

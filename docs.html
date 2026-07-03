@@ -35,36 +35,48 @@
     <h1>Démarrer avec EstimLink</h1>
     <p>Tout ce qu'il faut pour installer l'add-in dans Excel et créer votre premier devis.</p>
 
-    <h2>1. Télécharger le manifeste</h2>
+    <h2>1. Installer dans Excel pour Windows (recommandé)</h2>
     <p>
-        EstimLink s'installe via un fichier <em>manifeste</em> (<code>EstimLink-manifest.xml</code>)
-        qui indique à Excel où charger l'add-in.
+        Téléchargez et lancez <strong>EstimLink-Excel-Setup.exe</strong> (2 Mo) : il enregistre le complément
+        dans votre Excel automatiquement (catalogue de confiance + manifeste). Une seule confirmation
+        Windows (UAC) vous sera demandée pour créer le partage local du catalogue.
     </p>
     <p style="margin-top:16px;">
-        <a class="btn btn-primary" href="/download/EstimLink-manifest.xml" download="EstimLink-manifest.xml">⬇ Télécharger EstimLink-manifest.xml</a>
+        <a class="btn btn-primary" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.0.0/EstimLink-Excel-Setup.exe">⬇ Télécharger EstimLink-Excel-Setup.exe</a>
     </p>
-
-    <h2>2. Installer dans Excel sur le web</h2>
     <ol>
+        <li>Lancez l'installeur et suivez les étapes (quelques secondes).</li>
+        <li>À la fin, la fenêtre de vérification confirme que tout est prêt.</li>
+        <li>Dans Excel : <strong>Insertion → Mes compléments → Dossier partagé → Estim Link → Ajouter</strong> (une seule fois ; ensuite l'onglet reste disponible).</li>
+    </ol>
+    <div class="doc-callout">
+        <p>💡 Le raccourci <strong>« Vérifier EstimLink pour Excel »</strong> du menu Démarrer rouvre la fenêtre de diagnostic à tout moment et répare l'installation si besoin.</p>
+    </div>
+
+    <h2>2. Installer le connecteur ArchiCAD (optionnel)</h2>
+    <p>
+        Si vous utilisez ArchiCAD, installez ensuite <strong>EstimLink-Agent-Setup.exe</strong> (45 Mo) :
+        l'agent local qui relie vos maquettes au devis. Il installe aussi automatiquement l'add-on
+        <a href="https://github.com/ENZYME-APD/tapir-archicad-automation" style="color:var(--accent);">Tapir</a>
+        (open source, licence MIT) dans chaque Archicad 27, 28 ou 29 détecté sur votre poste.
+    </p>
+    <p style="margin-top:16px;">
+        <a class="btn btn-ghost" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.0.0/EstimLink-Agent-Setup.exe">⬇ Télécharger EstimLink-Agent-Setup.exe</a>
+    </p>
+    <ol>
+        <li>Fermez Archicad avant l'installation (sinon la copie de Tapir sera refusée).</li>
+        <li>Lancez l'installeur ; une confirmation Windows (UAC) est demandée pour copier Tapir.</li>
+        <li>L'agent démarre automatiquement et se relancera à chaque ouverture de session Windows.</li>
+    </ol>
+
+    <h2>3. Installer dans Excel sur le web (alternative sans installeur)</h2>
+    <ol>
+        <li>Téléchargez le <a href="/download/EstimLink-manifest.xml" download="EstimLink-manifest.xml" style="color:var(--accent);">manifeste seul</a> (<code>EstimLink-manifest.xml</code>).</li>
         <li>Ouvrez un classeur sur <em>excel.office.com</em> (ou office.com → Excel).</li>
         <li>Onglet <strong>Accueil</strong> → <strong>Compléments</strong> → <strong>Plus de compléments</strong>.</li>
         <li>Onglet <strong>Mes compléments</strong> → <strong>Charger mon complément</strong> (Upload My Add-in).</li>
-        <li>Sélectionnez le fichier <code>EstimLink-manifest.xml</code> téléchargé, puis validez.</li>
-        <li>L'onglet <strong>Estim Link</strong> apparaît dans le ruban : cliquez sur le bouton pour ouvrir le panneau.</li>
+        <li>Sélectionnez le fichier téléchargé, puis validez : l'onglet <strong>Estim Link</strong> apparaît dans le ruban.</li>
     </ol>
-
-    <h2>3. Installer dans Excel pour Windows</h2>
-    <p>Sur le poste de travail, Excel charge les compléments personnalisés depuis un <em>catalogue de confiance</em> (dossier partagé) :</p>
-    <ol>
-        <li>Créez un dossier, par exemple <code>C:\EstimLink</code>, et copiez-y le manifeste.</li>
-        <li>Partagez ce dossier : clic droit → <strong>Propriétés</strong> → <strong>Partage</strong> → <strong>Partager</strong> (avec vous-même), et notez le chemin réseau (ex. <code>\\VOTRE-PC\EstimLink</code>).</li>
-        <li>Dans Excel : <strong>Fichier → Options → Centre de gestion de la confidentialité → Paramètres du Centre… → Catalogues de compléments approuvés</strong>.</li>
-        <li>Collez le chemin réseau dans <strong>URL du catalogue</strong>, cliquez sur <strong>Ajouter le catalogue</strong>, cochez <strong>Afficher dans le menu</strong>, puis OK et redémarrez Excel.</li>
-        <li>Ensuite : <strong>Accueil → Compléments → Plus de compléments → Dossier partagé</strong> → sélectionnez <strong>Estim Link</strong> → <strong>Ajouter</strong>.</li>
-    </ol>
-    <div class="doc-callout">
-        <p>💡 Cette manipulation n'est à faire qu'une seule fois. Aux prochains démarrages, EstimLink sera directement disponible dans vos compléments.</p>
-    </div>
 
     <h2>4. Se connecter</h2>
     <ol>
@@ -83,8 +95,9 @@
 
     <h2>6. Connecter ArchiCAD</h2>
     <p>
-        Depuis l'onglet <strong>ArchiCAD</strong> du panneau, chargez les nomenclatures exportées de votre maquette.
-        EstimLink résout ensuite chaque référence en cascade (correspondance exacte → normalisée → similarité IA)
+        Le connecteur ArchiCAD (étape 2) doit être installé, et Archicad ouvert avec votre projet.
+        Depuis l'onglet <strong>ArchiCAD</strong> du panneau, chargez votre maquette : EstimLink résout
+        chaque référence en cascade (correspondance exacte → normalisée → similarité IA)
         pour injecter les quantités du modèle dans vos postes.
     </p>
 
