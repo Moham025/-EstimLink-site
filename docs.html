@@ -56,19 +56,25 @@
 
     <h2>2. Installer le connecteur ArchiCAD (optionnel)</h2>
     <p>
-        Si vous utilisez ArchiCAD, installez ensuite <strong>EstimLink-for-Archicad-Setup.exe</strong> (45 Mo) :
+        Si vous utilisez ArchiCAD, installez ensuite <strong>EstimLink-for-Archicad-Setup.exe</strong> (version 1.3.1, environ 45 Mo) :
         l'agent local qui relie vos maquettes au devis. Il installe aussi automatiquement l'add-on
         <a href="https://github.com/ENZYME-APD/tapir-archicad-automation" style="color:var(--accent);">Tapir</a>
         (open source, licence MIT) dans chaque Archicad 27, 28 ou 29 détecté sur votre poste.
     </p>
     <p style="margin-top:16px;">
-        <a class="btn btn-ghost" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.0/EstimLink-for-Archicad-Setup.exe">⬇ Télécharger EstimLink-for-Archicad-Setup.exe</a>
+        <a class="btn btn-ghost" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.1/EstimLink-for-Archicad-Setup.exe">⬇ Télécharger EstimLink-for-Archicad-Setup.exe</a>
     </p>
     <ol>
         <li>Fermez Archicad avant l'installation (sinon la copie de Tapir sera refusée).</li>
         <li>Lancez l'installeur ; une confirmation Windows (UAC) est demandée pour copier Tapir.</li>
         <li>L'agent démarre automatiquement et se relancera à chaque ouverture de session Windows.</li>
+        <li>Relancez Archicad puis vérifiez que Tapir est chargé dans <strong>Options → Gestionnaire d'extensions</strong>.</li>
     </ol>
+    <div class="doc-callout">
+        <p><strong>EstimLink pour ArchiCAD est déjà installé, mais Tapir manque ?</strong>
+        Fermez Archicad puis lancez le <a href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.1/EstimLink-Tapir-Repair-1.3.1.exe" style="color:var(--accent);">correctif Tapir 1.3.1</a> (environ 3 Mo).
+        Il répare la détection et l'installation de Tapir sans remplacer l'agent ni modifier vos projets.</p>
+    </div>
 
     <h2>3. Installer dans Excel sur le web (alternative sans installeur)</h2>
     <ol>

@@ -27,14 +27,20 @@ Site 100 % statique — aucun build, aucune dépendance.
 ## Installeurs (GitHub Releases)
 
 Les boutons de téléchargement pointent vers les GitHub Releases de ce repo :
-`https://github.com/Moham025/-EstimLink-site/releases/download/v1.0.0/…`
+- Excel : `v1.3.0/EstimLink-Excel-Setup.exe` (inchangé).
+- Connecteur Archicad complet : `v1.3.1/EstimLink-for-Archicad-Setup.exe`.
+- Réparation d'une installation existante : `v1.3.1/EstimLink-Tapir-Repair-1.3.1.exe` (guide d'installation).
+
+La version 1.3.1 corrige la détection d'Archicad depuis PowerShell 32 bits et les
+messages d'échec de copie de Tapir. Le connecteur complet conserve le bundle
+Python extrait de la release publique 1.3.0 ; seuls les scripts d'installation
+et de vérification sont mis à jour.
 
 Pour publier une version :
-1. Compiler les deux installeurs (repo EstimLink-Local, dossier `installer/`) :
-   `EstimLink-Excel-Setup.exe` (~2 Mo) et `EstimLink-Agent-Setup.exe` (~45 Mo).
-2. Sur GitHub → **Releases → Draft a new release** → tag `v1.0.0` (exactement, sinon les liens du site cassent).
-3. Glisser-déposer les deux `.exe` dans la release, puis **Publish**.
-4. Pour une nouvelle version (ex. `v1.1.0`) : créer la release puis mettre à jour les URLs dans `index.html` et `docs.html`.
+1. Compiler les installeurs concernés (repo EstimLink-Local, dossier `installer/`).
+2. Créer une release GitHub avec le nouveau tag, joindre les `.exe`, puis publier.
+3. Vérifier que les liens de téléchargement fonctionnent avant de mettre à jour
+   `index.html` et `docs.html`. Conserver les liens des composants inchangés.
 
 ## À maintenir
 
