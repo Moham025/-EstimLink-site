@@ -26,48 +26,36 @@
 
 <div class="container doc-layout"><aside class="doc-sidebar" aria-label="Sommaire du guide"><p>GUIDE D’INSTALLATION</p><a href="#excel">01 · Excel Windows</a><a href="#archicad">02 · Connecteur Archicad</a><a href="#web">03 · Excel sur le web</a><a href="#connexion">04 · Connexion</a><a href="#premier-devis">05 · Premier devis</a><a href="#liaison">06 · Liaison Archicad</a><a href="#aide">Besoin d’aide ?</a></aside><main class="doc-wrap" id="contenu">
     <p class="kicker">Documentation</p>
-    <h1>Démarrer avec EstimLink</h1><div class="doc-callout"><p><strong>Deux versions à distinguer.</strong> Les téléchargements ci-dessous correspondent à la version publiée. EstimLink 2 est en validation : son agent local compatible est nécessaire pour enregistrer les projets, même sans Archicad. Il n’est pas encore proposé au téléchargement public.</p></div>
-    <p>Installez le complément Excel et, si nécessaire, le connecteur Archicad. Une solution NGNIOR CONCEPTION.</p>
+    <h1>Démarrer avec EstimLink</h1>    <p>Un seul programme installe tout. Une solution NGNIOR CONCEPTION.</p>
 
-    <h2 id="excel">1. Installer dans Excel pour Windows (recommandé)</h2>
+    <h2 id="excel">1. Installer EstimLink pour Windows</h2>
     <p>
-        Téléchargez et lancez <strong>EstimLink-Excel-Setup.exe</strong> (version 1.3.0, environ 2,5 Mo) : il enregistre le complément
-        dans votre Excel automatiquement (catalogue de confiance + manifeste). Une seule confirmation
-        Windows (UAC) vous sera demandée pour créer le partage local du catalogue.
+        Téléchargez et lancez <strong>EstimLink-Setup-2.0.0.exe</strong> (environ 58 Mo). Il installe le complément Excel
+        et l’agent local qui enregistre vos projets sur votre poste. Windows (UAC) vous demandera une confirmation.
     </p>
     <p style="margin-top:16px;">
-        <a class="button" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.0/EstimLink-Excel-Setup.exe">⬇ Télécharger EstimLink-Excel-Setup.exe</a>
+        <a class="button" href="https://github.com/Moham025/-EstimLink-site/releases/download/v2.0.0/EstimLink-Setup-2.0.0.exe">⬇ Télécharger EstimLink-Setup-2.0.0.exe</a>
     </p>
     <ol>
-        <li>Lancez l'installeur et suivez les étapes.</li>
-        <li>À la fin, la fenêtre de vérification confirme que tout est prêt.</li>
+        <li>Fermez Excel et Archicad, puis lancez l'installeur et suivez les étapes.</li>
+        <li>L'agent démarre automatiquement et se relancera à chaque ouverture de session Windows.</li>
         <li>Dans Excel : <strong>Insertion → Mes compléments → Dossier partagé → Estim Link → Ajouter</strong> (une seule fois ; ensuite l'onglet reste disponible).</li>
     </ol>
     <div class="doc-callout">
-        <p>💡 Le raccourci <strong>« Vérifier EstimLink pour Excel »</strong> du menu Démarrer rouvre la fenêtre de diagnostic à tout moment et répare l'installation si besoin.</p>
+        <p>Vous aviez déjà EstimLink ? Lancez simplement ce programme : il met à jour l'installation et conserve vos projets.</p>
     </div>
 
-    <h2 id="archicad">2. Installer le connecteur ArchiCAD (optionnel)</h2>
+    <h2 id="archicad">2. Liaison Archicad (automatique)</h2>
     <p>
-        Si vous utilisez ArchiCAD, installez ensuite <strong>EstimLink-for-Archicad-Setup.exe</strong> (version 1.3.1, environ 47,5 Mo) :
-        l'agent local qui relie vos maquettes au devis. Il installe aussi automatiquement l'add-on
+        Si Archicad 27, 28 ou 29 est présent sur votre poste, l'installeur ajoute l'add-on
         <a href="https://github.com/ENZYME-APD/tapir-archicad-automation" style="color:var(--accent);">Tapir</a>
-        (open source, licence MIT) dans chaque Archicad 27, 28 ou 29 détecté sur votre poste.
-    </p>
-    <p style="margin-top:16px;">
-        <a class="button secondary" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.1/EstimLink-for-Archicad-Setup.exe">⬇ Télécharger EstimLink-for-Archicad-Setup.exe</a>
+        (open source, licence MIT) dans chaque version détectée. Sans Archicad, rien n'est ajouté et EstimLink fonctionne normalement.
     </p>
     <ol>
-        <li>Fermez Archicad avant l'installation (sinon la copie de Tapir sera refusée).</li>
-        <li>Lancez l'installeur ; une confirmation Windows (UAC) est demandée pour copier Tapir.</li>
-        <li>L'agent démarre automatiquement et se relancera à chaque ouverture de session Windows.</li>
-        <li>Relancez Archicad puis vérifiez que Tapir est chargé dans <strong>Options → Gestionnaire d'extensions</strong>.</li>
+        <li>Relancez Archicad après l'installation.</li>
+        <li>Vérifiez que Tapir est chargé dans <strong>Options → Gestionnaire d'extensions</strong>.</li>
+        <li>Archicad installé plus tard ? Relancez l'installeur EstimLink pour ajouter Tapir.</li>
     </ol>
-    <div class="doc-callout">
-        <p><strong>EstimLink pour ArchiCAD est déjà installé, mais Tapir manque ?</strong>
-        Fermez Archicad puis lancez le <a href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.1/EstimLink-Tapir-Repair-1.3.1.exe" style="color:var(--accent);">correctif Tapir 1.3.1</a> (environ 3 Mo).
-        Il répare la détection et l'installation de Tapir sans remplacer l'agent ni modifier vos projets.</p>
-    </div>
 
     <div class="doc-callout"><p>Le chargement manuel du manifeste dépend de votre version d’Excel et des autorisations de votre organisation. Si l’option est absente, rapprochez-vous de votre administrateur.</p></div>
     <h2 id="web">3. Installer dans Excel sur le web (alternative sans installeur)</h2>
