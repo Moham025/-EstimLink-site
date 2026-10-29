@@ -6,47 +6,40 @@
     <title>Documentation — EstimLink</title>
     <meta name="description" content="Guide d'installation et de démarrage rapide de l'add-in Excel EstimLink.">
     <link rel="canonical" href="https://estimlink.ngniorconception.com/docs.html">
-    <link rel="icon" type="image/png" href="/assets/icon-32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/brand-mark.svg">
+    <script src="/site.js" defer></script>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<header class="nav scrolled" id="nav">
-    <a class="nav-brand" href="/">
-        <img src="/assets/icon-32.png" alt="" width="26" height="26">
-        <span>Estim<em>Link</em></span>
-    </a>
-    <nav class="nav-links" id="nav-links">
-        <a href="/#produit">Produit</a>
-        <a href="/#archicad">ArchiCAD</a>
-        <a href="/#tarifs">Tarification</a>
-        <a href="/docs.html">Docs</a>
-    </nav>
-    <div class="nav-cta">
-        <a class="btn btn-primary btn-sm" href="/#telecharger">Télécharger</a>
-        <button class="nav-burger" id="nav-burger" aria-label="Menu">☰</button>
-    </div>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<div class="company-bar"><div class="container"><span>Une solution <strong>NGNIOR CONCEPTION</strong></span><a href="/#ecosysteme">Découvrir l’écosystème ↗</a></div></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EstimLink — accueil"><img src="/assets/brand-mark.svg" width="40" height="40" alt=""><span>Estim<span class="brand-link">Link</span></span></a>
+    <nav class="main-nav" id="navigation" data-menu aria-label="Navigation principale"><a href="/#produit">Le complément</a><a href="/#archicad">Archicad</a><a href="/#ecosysteme">Nos solutions</a><a href="/docs.html">Documentation</a></nav>
+    <a class="button small header-download" href="/#telecharger">Installer EstimLink <span aria-hidden="true">↗</span></a>
+    <button class="menu-button" type="button" data-menu-button aria-controls="navigation" aria-expanded="false" aria-label="Ouvrir ou fermer le menu" hidden><span aria-hidden="true">☰</span></button>
+  </div>
 </header>
 
-<main class="doc-wrap">
+
+<div class="container doc-layout"><aside class="doc-sidebar" aria-label="Sommaire du guide"><p>GUIDE D’INSTALLATION</p><a href="#excel">01 · Excel Windows</a><a href="#archicad">02 · Connecteur Archicad</a><a href="#web">03 · Excel sur le web</a><a href="#connexion">04 · Connexion</a><a href="#premier-devis">05 · Premier devis</a><a href="#liaison">06 · Liaison Archicad</a><a href="#aide">Besoin d’aide ?</a></aside><main class="doc-wrap" id="contenu">
     <p class="kicker">Documentation</p>
     <h1>Démarrer avec EstimLink</h1>
-    <p>Tout ce qu'il faut pour installer l'add-in dans Excel et créer votre premier devis.</p>
+    <p>Installez le complément Excel et, si nécessaire, le connecteur Archicad. Une solution NGNIOR CONCEPTION.</p>
 
-    <h2>1. Installer dans Excel pour Windows (recommandé)</h2>
+    <h2 id="excel">1. Installer dans Excel pour Windows (recommandé)</h2>
     <p>
-        Téléchargez et lancez <strong>EstimLink-Excel-Setup.exe</strong> (2 Mo) : il enregistre le complément
+        Téléchargez et lancez <strong>EstimLink-Excel-Setup.exe</strong> (version 1.3.0, environ 2,5 Mo) : il enregistre le complément
         dans votre Excel automatiquement (catalogue de confiance + manifeste). Une seule confirmation
         Windows (UAC) vous sera demandée pour créer le partage local du catalogue.
     </p>
     <p style="margin-top:16px;">
-        <a class="btn btn-primary" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.0/EstimLink-Excel-Setup.exe">⬇ Télécharger EstimLink-Excel-Setup.exe</a>
+        <a class="button" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.0/EstimLink-Excel-Setup.exe">⬇ Télécharger EstimLink-Excel-Setup.exe</a>
     </p>
     <ol>
-        <li>Lancez l'installeur et suivez les étapes (quelques secondes).</li>
+        <li>Lancez l'installeur et suivez les étapes.</li>
         <li>À la fin, la fenêtre de vérification confirme que tout est prêt.</li>
         <li>Dans Excel : <strong>Insertion → Mes compléments → Dossier partagé → Estim Link → Ajouter</strong> (une seule fois ; ensuite l'onglet reste disponible).</li>
     </ol>
@@ -54,15 +47,15 @@
         <p>💡 Le raccourci <strong>« Vérifier EstimLink pour Excel »</strong> du menu Démarrer rouvre la fenêtre de diagnostic à tout moment et répare l'installation si besoin.</p>
     </div>
 
-    <h2>2. Installer le connecteur ArchiCAD (optionnel)</h2>
+    <h2 id="archicad">2. Installer le connecteur ArchiCAD (optionnel)</h2>
     <p>
-        Si vous utilisez ArchiCAD, installez ensuite <strong>EstimLink-for-Archicad-Setup.exe</strong> (version 1.3.1, environ 45 Mo) :
+        Si vous utilisez ArchiCAD, installez ensuite <strong>EstimLink-for-Archicad-Setup.exe</strong> (version 1.3.1, environ 47,5 Mo) :
         l'agent local qui relie vos maquettes au devis. Il installe aussi automatiquement l'add-on
         <a href="https://github.com/ENZYME-APD/tapir-archicad-automation" style="color:var(--accent);">Tapir</a>
         (open source, licence MIT) dans chaque Archicad 27, 28 ou 29 détecté sur votre poste.
     </p>
     <p style="margin-top:16px;">
-        <a class="btn btn-ghost" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.1/EstimLink-for-Archicad-Setup.exe">⬇ Télécharger EstimLink-for-Archicad-Setup.exe</a>
+        <a class="button secondary" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.1/EstimLink-for-Archicad-Setup.exe">⬇ Télécharger EstimLink-for-Archicad-Setup.exe</a>
     </p>
     <ol>
         <li>Fermez Archicad avant l'installation (sinon la copie de Tapir sera refusée).</li>
@@ -76,7 +69,8 @@
         Il répare la détection et l'installation de Tapir sans remplacer l'agent ni modifier vos projets.</p>
     </div>
 
-    <h2>3. Installer dans Excel sur le web (alternative sans installeur)</h2>
+    <div class="doc-callout"><p>Le chargement manuel du manifeste dépend de votre version d’Excel et des autorisations de votre organisation. Si l’option est absente, rapprochez-vous de votre administrateur.</p></div>
+    <h2 id="web">3. Installer dans Excel sur le web (alternative sans installeur)</h2>
     <ol>
         <li>Téléchargez le <a href="/download/EstimLink-manifest.xml" download="EstimLink-manifest.xml" style="color:var(--accent);">manifeste seul</a> (<code>EstimLink-manifest.xml</code>).</li>
         <li>Ouvrez un classeur sur <em>excel.office.com</em> (ou office.com → Excel).</li>
@@ -85,14 +79,14 @@
         <li>Sélectionnez le fichier téléchargé, puis validez : l'onglet <strong>Estim Link</strong> apparaît dans le ruban.</li>
     </ol>
 
-    <h2>4. Se connecter</h2>
+    <h2 id="connexion">4. Se connecter</h2>
     <ol>
         <li>Ouvrez le panneau <strong>Estim Link</strong> depuis le ruban.</li>
         <li>Connectez-vous avec <strong>Google</strong> ou créez un compte avec votre email.</li>
-        <li>Vos bibliothèques de prix et projets sont liés à votre compte et vous suivent partout.</li>
+        <li>Les options de synchronisation dépendent des fonctionnalités activées pour votre compte. Vérifiez les conditions d’accès avec notre équipe.</li>
     </ol>
 
-    <h2>5. Premier devis en 3 commandes</h2>
+    <h2 id="premier-devis">5. Premier devis en 3 commandes</h2>
     <p>Dans le chat du panneau, essayez par exemple :</p>
     <ul>
         <li><code>Crée une table DQE pour une villa R+1</code> — l'assistant structure les lots et postes.</li>
@@ -100,7 +94,7 @@
         <li><code>Génère le récapitulatif et convertis en bordereau</code> — totaux, montants en lettres, mise en forme.</li>
     </ul>
 
-    <h2>6. Connecter ArchiCAD</h2>
+    <h2 id="liaison">6. Connecter ArchiCAD</h2>
     <p>
         Le connecteur ArchiCAD (étape 2) doit être installé, et Archicad ouvert avec votre projet.
         Depuis l'onglet <strong>ArchiCAD</strong> du panneau, chargez votre maquette : EstimLink résout
@@ -108,18 +102,12 @@
         pour injecter les quantités du modèle dans vos postes.
     </p>
 
-    <h2>Besoin d'aide ?</h2>
+    <h2 id="aide">Besoin d'aide ?</h2>
     <p>Écrivez-nous : <a href="mailto:sanou.moham92@gmail.com" style="color:var(--accent);">sanou.moham92@gmail.com</a></p>
-</main>
+</main></div>
 
-<footer class="footer">
-    <p class="footer-copy">© 2026 EstimLink. Tous droits réservés.</p>
-</footer>
+<footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="/#top"><img src="/assets/brand-mark.svg" width="40" height="40" alt=""><span>Estim<span class="brand-link">Link</span></span></a><p>Du métré au devis, dans Excel.</p><span class="company-signature">UNE SOLUTION NGNIOR CONCEPTION</span></div><nav aria-label="Liens de pied de page"><a href="/#produit">Le complément</a><a href="/#ecosysteme">L’écosystème</a><a href="/docs.html">Documentation</a><a href="mailto:sanou.moham92@gmail.com">Nous contacter</a></nav></div><div class="footer-bottom"><span>© 2026 NGNIOR CONCEPTION · EstimLink</span><span>Excel et Archicad sont des marques de leurs propriétaires respectifs.</span></div></div></footer>
 
-<script>
-    const burger = document.getElementById('nav-burger');
-    const links = document.getElementById('nav-links');
-    burger.addEventListener('click', () => links.classList.toggle('open'));
-</script>
+
 </body>
 </html>

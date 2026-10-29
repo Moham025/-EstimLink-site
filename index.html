@@ -1,274 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EstimLink — Le chiffrage BTP, directement dans Excel</title>
-    <meta name="description" content="EstimLink est un add-in Excel dopé à l'IA pour les métreurs et économistes de la construction : tables DQE, bibliothèque de prix, quantités ArchiCAD et bordereaux générés automatiquement.">
-    <meta property="og:title" content="EstimLink — Le chiffrage BTP, directement dans Excel">
-    <meta property="og:description" content="Add-in Excel avec assistant IA, tables DQE, bibliothèque de prix et liaison ArchiCAD.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://estimlink.ngniorconception.com/">
-    <meta property="og:image" content="https://estimlink.ngniorconception.com/assets/Estimlink_logo.jpg">
-    <link rel="canonical" href="https://estimlink.ngniorconception.com/">
-    <link rel="icon" type="image/png" href="/assets/icon-32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EstimLink — Du métré au devis, dans Excel</title>
+  <meta name="description" content="EstimLink, le complément Excel pour le métré et l’estimation BTP : DQE, bibliothèque de prix et connecteur Archicad. Une solution NGNIOR CONCEPTION.">
+  <meta name="theme-color" content="#174d3c">
+  <meta property="og:title" content="EstimLink — Du métré au devis, dans Excel">
+  <meta property="og:description" content="Gardez vos repères dans Excel. Structurez vos DQE, retrouvez vos prix et reliez vos quantités Archicad avec EstimLink.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://estimlink.ngniorconception.com/">
+  <meta property="og:image" content="https://estimlink.ngniorconception.com/assets/Estimlink_logo.jpg">
+  <link rel="canonical" href="https://estimlink.ngniorconception.com/">
+  <link rel="icon" href="/assets/brand-mark.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/icon-32.png" type="image/png">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/site.js" defer></script>
 </head>
 <body>
-
-<header class="nav" id="nav">
-    <a class="nav-brand" href="#top">
-        <img src="/assets/icon-32.png" alt="" width="26" height="26">
-        <span>Estim<em>Link</em></span>
-    </a>
-    <nav class="nav-links" id="nav-links">
-        <a href="#produit">Produit</a>
-        <a href="#archicad">ArchiCAD</a>
-        <a href="#tarifs">Tarification</a>
-        <a href="/docs.html">Docs</a>
-    </nav>
-    <div class="nav-cta">
-        <a class="btn btn-primary btn-sm" href="#telecharger">Télécharger</a>
-        <button class="nav-burger" id="nav-burger" aria-label="Menu">☰</button>
-    </div>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<div class="company-bar"><div class="container"><span>Une solution <strong>NGNIOR CONCEPTION</strong></span><a href="#ecosysteme">Découvrir l’écosystème ↗</a></div></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EstimLink — accueil"><img src="/assets/brand-mark.svg" width="40" height="40" alt=""><span>Estim<span class="brand-link">Link</span></span></a>
+    <nav class="main-nav" id="navigation" data-menu aria-label="Navigation principale"><a href="#produit">Le complément</a><a href="#archicad">Archicad</a><a href="#ecosysteme">Nos solutions</a><a href="/docs.html">Documentation</a></nav>
+    <a class="button small header-download" href="#telecharger">Installer EstimLink <span aria-hidden="true">↗</span></a>
+    <button class="menu-button" type="button" data-menu-button aria-controls="navigation" aria-expanded="false" aria-label="Ouvrir ou fermer le menu" hidden><span aria-hidden="true">☰</span></button>
+  </div>
 </header>
-
-<main id="top">
-
-    <!-- ── HERO ─────────────────────────────────────────────── -->
-    <section class="hero">
-        <div class="hero-glow" aria-hidden="true"></div>
-        <p class="kicker reveal">Add-in Excel &nbsp;·&nbsp; Assistant IA &nbsp;·&nbsp; Liaison ArchiCAD</p>
-        <h1 class="reveal">Le chiffrage BTP,<br><span class="accent">directement dans Excel.</span></h1>
-        <p class="hero-sub reveal">
-            EstimLink installe un assistant intelligent dans votre panneau Excel :
-            tables DQE structurées, bibliothèque de prix, quantités importées d'ArchiCAD
-            et bordereaux générés en quelques secondes — sans quitter votre classeur.
-        </p>
-        <div class="hero-actions reveal">
-            <a class="btn btn-primary" href="#telecharger">Télécharger l'add-in</a>
-            <a class="btn btn-ghost" href="/docs.html">Lire la documentation</a>
-        </div>
-
-        <!-- Mock taskpane -->
-        <div class="hero-mock reveal" aria-hidden="true">
-            <div class="mock-window">
-                <div class="mock-titlebar">
-                    <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-                    <span class="mock-title">Classeur — Excel</span>
-                </div>
-                <div class="mock-body">
-                    <div class="mock-sheet">
-                        <div class="mock-row head"><span>N°</span><span>Désignation</span><span>U</span><span>Qté</span><span>P.U.</span><span>Montant</span></div>
-                        <div class="mock-row"><span>2.1</span><span>Béton de propreté dosé à 150 kg/m³</span><span>m³</span><span>12,4</span><span>85 000</span><span>1 054 000</span></div>
-                        <div class="mock-row"><span>2.2</span><span>Béton armé pour semelles filantes</span><span>m³</span><span>38,2</span><span>145 000</span><span>5 539 000</span></div>
-                        <div class="mock-row"><span>2.3</span><span>Maçonnerie d'agglos creux de 15</span><span>m²</span><span>246,0</span><span>9 500</span><span>2 337 000</span></div>
-                        <div class="mock-row total"><span></span><span>Total Gros œuvre</span><span></span><span></span><span></span><span>8 930 000</span></div>
-                    </div>
-                    <div class="mock-pane">
-                        <div class="mock-pane-head"><img src="/assets/icon-32.png" alt="" width="16" height="16"> Estim Link</div>
-                        <div class="mock-msg user">Insère les quantités de maçonnerie du projet ArchiCAD « Villa R+1 »</div>
-                        <div class="mock-msg bot">✓ 3 postes mis à jour depuis le modèle.<br>✓ Récapitulatif recalculé.</div>
-                        <div class="mock-input">Écrire un message…</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── BANDEAU ──────────────────────────────────────────── -->
-    <section class="strip reveal">
-        <span>Fonctionne avec</span>
-        <strong>Microsoft Excel</strong>
-        <span class="strip-sep">·</span>
-        <strong>ArchiCAD</strong>
-        <span class="strip-sep">·</span>
-        <strong>Windows &amp; Excel sur le web</strong>
-    </section>
-
-    <!-- ── PRODUIT ──────────────────────────────────────────── -->
-    <section class="section" id="produit">
-        <p class="kicker reveal">Produit</p>
-        <h2 class="reveal">Tout le métré, un seul panneau.</h2>
-        <p class="section-sub reveal">EstimLink ajoute un onglet à votre ruban Excel. Derrière, une équipe d'agents IA spécialisés travaille sur votre devis.</p>
-
-        <div class="grid">
-            <article class="card reveal">
-                <div class="card-icon">💬</div>
-                <h3>Assistant IA dans Excel</h3>
-                <p>Dialoguez avec votre classeur : « ajoute un poste », « corrige la numérotation », « vérifie le récap ». L'assistant lit et écrit directement dans vos feuilles.</p>
-            </article>
-            <article class="card reveal">
-                <div class="card-icon">📋</div>
-                <h3>Tables DQE structurées</h3>
-                <p>Créez et manipulez des Détails Quantitatifs Estimatifs propres : lots, postes, unités, totaux — avec numérotation automatique et cohérente.</p>
-            </article>
-            <article class="card reveal">
-                <div class="card-icon">💰</div>
-                <h3>Bibliothèque de prix</h3>
-                <p>Recherchez vos prix unitaires et laissez l'Agent Prix trouver et appliquer la meilleure correspondance pour chaque poste de votre devis.</p>
-            </article>
-            <article class="card reveal">
-                <div class="card-icon">🧾</div>
-                <h3>Bordereaux &amp; récapitulatifs</h3>
-                <p>Convertissez votre DQE en bordereau (montants en lettres inclus), générez le récapitulatif général et faites-le vérifier automatiquement.</p>
-            </article>
-            <article class="card reveal">
-                <div class="card-icon">🏗️</div>
-                <h3>Quantités ArchiCAD</h3>
-                <p>Chargez les nomenclatures de vos maquettes ArchiCAD et injectez les quantités réelles du modèle directement dans vos postes.</p>
-            </article>
-            <article class="card reveal">
-                <div class="card-icon">🔐</div>
-                <h3>Compte sécurisé</h3>
-                <p>Connexion Google ou email, vos bibliothèques et projets vous suivent sur tous vos postes de travail.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- ── ARCHICAD ─────────────────────────────────────────── -->
-    <section class="section section-split" id="archicad">
-        <div class="split-text">
-            <p class="kicker reveal">ArchiCAD</p>
-            <h2 class="reveal">De la maquette au devis,<br>sans ressaisie.</h2>
-            <p class="section-sub reveal">
-                EstimLink se connecte à vos projets ArchiCAD et résout chaque référence en cascade :
-                correspondance exacte, normalisée, puis similarité assistée par IA quand la désignation diffère.
-            </p>
-            <ul class="checklist reveal">
-                <li>Import des quantités du modèle (surfaces, volumes, comptages)</li>
-                <li>Rapprochement intelligent entre éléments du modèle et postes du DQE</li>
-                <li>Mise à jour du devis quand la maquette évolue</li>
-            </ul>
-        </div>
-        <div class="split-visual reveal" aria-hidden="true">
-            <div class="flow">
-                <div class="flow-node"><img src="/assets/archicadlogo.jpg" alt="ArchiCAD" class="flow-logo"><span>Maquette<br>ArchiCAD</span></div>
-                <div class="flow-arrow">⟶</div>
-                <div class="flow-node flow-node-accent"><img src="/assets/icon-80.png" alt="EstimLink" class="flow-logo"><span>EstimLink<br>résolution IA</span></div>
-                <div class="flow-arrow">⟶</div>
-                <div class="flow-node"><span class="flow-x">X</span><span>DQE<br>Excel</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── TARIFS ───────────────────────────────────────────── -->
-    <section class="section" id="tarifs">
-        <p class="kicker reveal">Tarification</p>
-        <h2 class="reveal">Simple, comme un devis bien fait.</h2>
-        <p class="section-sub reveal">Commencez gratuitement, passez au niveau supérieur quand vos projets grandissent.</p>
-
-        <div class="pricing">
-            <article class="price-card reveal">
-                <h3>Découverte</h3>
-                <p class="price"><span class="amount">0</span> <span class="cur">FCFA</span></p>
-                <p class="price-note">Pour essayer EstimLink</p>
-                <ul>
-                    <li>Assistant IA (quota mensuel limité)</li>
-                    <li>Tables DQE &amp; numérotation</li>
-                    <li>1 projet ArchiCAD chargé</li>
-                </ul>
-                <a class="btn btn-ghost btn-block" href="#telecharger">Commencer</a>
-            </article>
-            <article class="price-card featured reveal">
-                <span class="badge">Recommandé</span>
-                <h3>Pro</h3>
-                <p class="price"><span class="amount">5 000</span> <span class="cur">FCFA / mois</span></p>
-                <p class="price-note">Pour les métreurs au quotidien</p>
-                <ul>
-                    <li>Assistant IA illimité</li>
-                    <li>Bibliothèque de prix personnelle</li>
-                    <li>Synchronisation des données entre vos postes</li>
-                    <li>Export &amp; import de templates et de bibliothèques</li>
-                    <li>Bordereaux &amp; récapitulatifs automatiques</li>
-                    <li>Projets ArchiCAD illimités</li>
-                </ul>
-                <a class="btn btn-primary btn-block" href="#telecharger">Essayer Pro</a>
-            </article>
-            <article class="price-card reveal">
-                <h3>Équipe</h3>
-                <p class="price"><span class="amount">Sur devis</span></p>
-                <p class="price-note">Pour les bureaux d'études</p>
-                <ul>
-                    <li>Tout le plan Pro</li>
-                    <li>Bibliothèques de prix partagées</li>
-                    <li>Support prioritaire</li>
-                </ul>
-                <a class="btn btn-ghost btn-block" href="mailto:sanou.moham92@gmail.com?subject=EstimLink%20%C3%89quipe">Nous contacter</a>
-            </article>
-        </div>
-    </section>
-
-    <!-- ── TÉLÉCHARGER ──────────────────────────────────────── -->
-    <section class="section section-download" id="telecharger">
-        <div class="download-box reveal">
-            <p class="kicker">Installation</p>
-            <h2>Installez EstimLink en 2 minutes.</h2>
-
-            <div class="dl-grid">
-                <article class="dl-card">
-                    <span class="dl-tag">Requis</span>
-                    <h3>EstimLink pour Excel</h3>
-                    <p>Installe le complément dans votre Excel (Windows). Double-cliquez, validez, l'onglet <strong>Estim Link</strong> apparaît dans le ruban.</p>
-                    <a class="btn btn-primary btn-block" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.0/EstimLink-Excel-Setup.exe">⬇ EstimLink-Excel-Setup.exe <span class="dl-size">2 Mo</span></a>
-                </article>
-                <article class="dl-card">
-                    <span class="dl-tag dl-tag-opt">Optionnel</span>
-                    <h3>Connecteur ArchiCAD</h3>
-                    <p>L'agent local qui relie vos maquettes ArchiCAD 27/28/29 au devis. Version 1.3.1 : détection d'Archicad corrigée, add-on Tapir inclus.</p>
-                    <a class="btn btn-ghost btn-block" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.1/EstimLink-for-Archicad-Setup.exe">⬇ EstimLink-for-Archicad-Setup.exe <span class="dl-size">45 Mo</span></a>
-                </article>
-            </div>
-
-            <p class="download-hint">
-                Windows 10/11 · Excel 2019, 2021 ou Microsoft 365 ·
-                Excel sur le web ? <a href="/download/EstimLink-manifest.xml" download="EstimLink-manifest.xml">téléchargez le manifeste seul</a> ·
-                <a href="/docs.html">Guide d'installation détaillé</a>
-            </p>
-        </div>
-    </section>
-
-</main>
-
-<footer class="footer">
-    <div class="footer-inner">
-        <div>
-            <a class="nav-brand" href="#top">
-                <img src="/assets/icon-32.png" alt="" width="22" height="22">
-                <span>Estim<em>Link</em></span>
-            </a>
-            <p class="footer-tag">Le chiffrage BTP, directement dans Excel.</p>
-        </div>
-        <nav class="footer-links">
-            <a href="#produit">Produit</a>
-            <a href="#archicad">ArchiCAD</a>
-            <a href="#tarifs">Tarification</a>
-            <a href="/docs.html">Documentation</a>
-            <a href="mailto:sanou.moham92@gmail.com">Contact</a>
-        </nav>
+<main id="contenu">
+  <section class="hero container" id="top" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot"></span> LE COMPLÉMENT EXCEL POUR LE BTP</p>
+      <h1 id="hero-title">Vos quantités.<br>Vos prix.<br><span>Votre devis, relié.</span></h1>
+      <p class="hero-description">Du métré au DQE, rassemblez votre travail dans Excel. EstimLink vous accompagne pour structurer vos postes, retrouver vos prix et exploiter vos quantités Archicad.</p>
+      <div class="actions"><a class="button" href="#telecharger">Installer EstimLink <span aria-hidden="true">↗</span></a><a class="text-link" href="#produit">Explorer le complément <span aria-hidden="true">↓</span></a></div>
+      <p class="hero-note">Pour les métreurs, économistes et bureaux d’études.</p>
+      <div class="hero-compatible"><span class="excel-icon" aria-hidden="true">X</span><span>Dans votre environnement <strong>Microsoft Excel</strong></span></div>
     </div>
-    <p class="footer-copy">© 2026 EstimLink. Tous droits réservés.</p>
-</footer>
-
-<script>
-    // Menu mobile
-    const burger = document.getElementById('nav-burger');
-    const links = document.getElementById('nav-links');
-    burger.addEventListener('click', () => links.classList.toggle('open'));
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
-
-    // Nav opaque au scroll
-    const nav = document.getElementById('nav');
-    addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 24), { passive: true });
-
-    // Apparition au scroll
-    const io = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+    <figure class="product-figure">
+      <div class="visual-heading"><span class="mini-label">DE LA MAQUETTE AU CHIFFRAGE</span><span class="visual-reference">EL / 01</span></div>
+      <div class="model-drawing" aria-hidden="true">
+        <svg viewBox="0 0 520 170" fill="none"><g stroke="#abc0b2"><path d="M30 135 255 25 485 135M30 105 255 -5 485 105M100 170 325 60M175 170 400 60M0 55 240 170M80 10 400 170" stroke-dasharray="3 5"/></g><g stroke="#326750" stroke-width="1.6" stroke-linejoin="round"><path d="m137 99 118-57 128 61-116 57z" fill="#e3ecdf"/><path d="M137 99V48l118-57v51M137 48l130 60 116-56v51M267 108v52M255-9l128 61M184 122V72l34-16v82M315 137V87l35-17v51"/><path d="m137 48 130 60 116-56-128-61z" fill="#f7f8ee" fill-opacity=".65"/><path d="m190 22 130 60M224 6l128 61M200 77l116-56"/></g><circle cx="383" cy="103" r="4" fill="#174d3c"/><path d="M389 103h65v35" stroke="#174d3c" stroke-dasharray="3 4"/><text x="26" y="153" fill="#326750" font-family="monospace" font-size="10">QUANTITÉS → POSTES → DQE</text></svg>
+      </div>
+      <div class="workbook">
+        <div class="workbook-title"><span><span class="excel-icon" aria-hidden="true">X</span> Estimation · Projet exemple</span><span class="window-dots" aria-hidden="true">•••</span></div>
+        <div class="workbook-toolbar"><span>Accueil</span><span>Insertion</span><strong>EstimLink</strong><span>Formules</span></div>
+        <div class="workbook-content">
+          <div class="sheet-preview"><div class="sheet-caption">DQE / GROS ŒUVRE <span>FCFA</span></div><table><caption class="sr-only">Exemple illustratif de détail quantitatif estimatif</caption><thead><tr><th scope="col">Désignation</th><th scope="col">U.</th><th scope="col">Qté</th><th scope="col">Montant</th></tr></thead><tbody><tr><td>Béton de propreté</td><td>m³</td><td>12,4</td><td>1 054 000</td></tr><tr class="selected-row"><td>Semelles filantes</td><td>m³</td><td>38,2</td><td>5 539 000</td></tr><tr><td>Maçonnerie de 15</td><td>m²</td><td>246</td><td>2 337 000</td></tr></tbody><tfoot><tr><th scope="row" colspan="3">Total du lot</th><td>8 930 000</td></tr></tfoot></table><div class="sheet-tabs"><span>+</span><strong>DQE</strong><span>Récapitulatif</span></div></div>
+          <div class="pane-preview"><div class="pane-brand"><img src="/assets/brand-mark.svg" alt="" width="23" height="23"> EstimLink</div><span class="pane-label">VOTRE ESPACE DE TRAVAIL</span><div class="pane-item">▦ &nbsp; Tables DQE</div><div class="pane-item">⌕ &nbsp; Bibliothèque de prix</div><div class="pane-item active">◇ &nbsp; Quantités Archicad</div><div class="pane-tip">De la donnée métier<br>à votre classeur.</div></div>
+        </div>
+      </div>
+      <figcaption>Aperçu illustratif · Données d’exemple, non contractuelles</figcaption>
+    </figure>
+  </section>
+  <div class="value-strip"><div class="container"><span>VOS REPÈRES, CONNECTÉS.</span><strong>Microsoft Excel</strong><span class="strip-plus" aria-hidden="true">+</span><strong>Données de prix</strong><span class="strip-plus" aria-hidden="true">+</span><strong>Maquettes Archicad</strong></div></div>
+  <section class="section container" id="produit" aria-labelledby="product-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / ESTIMLINK</p><h2 id="product-title">Moins de dispersion.<br>Plus de maîtrise du devis.</h2></div><p>Le complément complet pour réunir le métré, les prix et l’estimation dans votre outil de travail habituel.</p></div>
+    <div class="feature-grid">
+      <article class="feature-card"><span class="feature-number">01 — STRUCTURER</span><div class="feature-symbol" aria-hidden="true">▦</div><h3>Un DQE bien organisé</h3><p>Lots, postes, unités, quantités et totaux : structurez vos détails quantitatifs estimatifs et leur numérotation.</p></article>
+      <article class="feature-card"><span class="feature-number">02 — CHIFFRER</span><div class="feature-symbol" aria-hidden="true">⌕</div><h3>Vos prix à portée de main</h3><p>Retrouvez les désignations et prix unitaires de vos bibliothèques pour renseigner les postes de votre devis.</p></article>
+      <article class="feature-card"><span class="feature-number">03 — FINALISER</span><div class="feature-symbol" aria-hidden="true">≡</div><h3>Du détail au récapitulatif</h3><p>Préparez vos bordereaux et récapitulatifs à partir du DQE, avec l’aide de l’assistant intégré à Excel.</p></article>
+    </div>
+    <div class="assistant-note"><span class="outline-symbol" aria-hidden="true">✳</span><p><strong>Un assistant dans votre classeur.</strong> Décrivez votre besoin en langage naturel pour vous faire accompagner. Gardez la main sur la vérification des quantités, des prix et du résultat final.</p><a class="text-link" href="/docs.html#premier-devis">Voir les premiers pas ↗</a></div>
+  </section>
+  <section class="archicad-section" id="archicad" aria-labelledby="archicad-title"><div class="container archicad-grid">
+    <div><p class="eyebrow">02 / LA LIAISON ARCHICAD</p><h2 id="archicad-title">La maquette d’un côté.<br>Le devis, enfin relié.</h2><p>Le connecteur local EstimLink rapproche votre environnement Archicad de votre travail dans Excel. Extrayez les quantités, organisez les postes et préparez leur intégration au chiffrage.</p><ul class="check-list"><li>Surfaces, volumes et comptages issus du modèle</li><li>Édition et fusion des postes extraits</li><li>Connecteur Windows pour Archicad 27, 28 et 29</li></ul><a class="button light" href="#telecharger">Choisir le connecteur <span aria-hidden="true">↗</span></a></div>
+    <div class="connection-visual"><div class="connection-card"><span class="node-icon" aria-hidden="true">◇</span><div><small>01 / LA SOURCE</small><strong>Votre maquette Archicad</strong><span>Éléments et quantités</span></div></div><div class="connector-line" aria-hidden="true">↓</div><div class="connection-card highlighted"><img src="/assets/brand-mark.svg" width="42" height="42" alt=""><div><small>02 / LE LIEN</small><strong>Connecteur EstimLink</strong><span>Agent local + extension Tapir</span></div></div><div class="connector-line" aria-hidden="true">↓</div><div class="connection-card"><span class="node-icon" aria-hidden="true">X</span><div><small>03 / VOTRE LIVRABLE</small><strong>Votre DQE dans Excel</strong><span>Postes, prix et montants</span></div></div><p>Connecteur actuel disponible · distinct du projet de plateforme API/MCP NGNIOR Link.</p></div>
+  </div></section>
+  <section class="section container" id="ecosysteme" aria-labelledby="ecosystem-title">
+    <div class="section-heading"><div><p class="eyebrow">03 / UN ÉCOSYSTÈME, DES RÔLES CLAIRS</p><h2 id="ecosystem-title">Le bon outil.<br>Pour chaque besoin.</h2></div><p><strong>NGNIOR CONCEPTION</strong>, l’entreprise mère, porte EstimLink et le développement de l’écosystème NGNIOR Link.</p></div>
+    <div class="ecosystem-grid">
+      <article class="solution-card current"><div class="solution-top"><span class="product-code">EL</span><span class="pill available">À télécharger</span></div><h3>EstimLink</h3><p class="solution-purpose">Le complément Excel complet.</p><p>Métré, DQE, bibliothèques de prix, assistant et liaison Archicad : le point d’entrée pour travailler sur vos estimations.</p><a class="text-link" href="#telecharger">Installer EstimLink <span aria-hidden="true">↗</span></a></article>
+      <article class="solution-card"><div class="solution-top"><span class="product-code">LS</span><span class="pill">En projet</span></div><h3>LinkSearch</h3><p class="solution-purpose">La recherche, simplement.</p><p>Mini-complément Excel envisagé pour rechercher des désignations et des prix. Sa distribution autonome n’est pas encore ouverte.</p><a class="text-link" href="mailto:sanou.moham92@gmail.com?subject=Int%C3%A9r%C3%AAt%20pour%20LinkSearch">Exprimer mon intérêt <span aria-hidden="true">↗</span></a></article>
+      <article class="solution-card"><div class="solution-top"><span class="product-code">NL</span><span class="pill">En projet</span></div><h3>NGNIOR Link</h3><p class="solution-purpose">La plateforme de connexion.</p><p>La future plateforme API, MCP, données et workflows de l’écosystème. Son offre publique et ses modalités d’accès restent à définir.</p><a class="text-link" href="mailto:sanou.moham92@gmail.com?subject=Projet%20NGNIOR%20Link">Parler d’une intégration <span aria-hidden="true">↗</span></a></article>
+    </div>
+  </section>
+  <section class="offer-section container" id="tarifs" aria-labelledby="offer-title"><div><p class="eyebrow">OFFRE & ACCOMPAGNEMENT</p><h2 id="offer-title">Un projet à chiffrer ?<br>Commençons par votre besoin.</h2></div><div><p>Vous travaillez seul ou en équipe ? Contactez NGNIOR CONCEPTION pour connaître les conditions d’accès, les fonctionnalités incluses et l’accompagnement adapté à votre usage.</p><a class="button secondary" href="mailto:sanou.moham92@gmail.com?subject=EstimLink%20-%20Offre%20et%20d%C3%A9monstration">Demander une démonstration <span aria-hidden="true">↗</span></a><p class="small-print">Tarifs et quotas à confirmer avant souscription.</p></div></section>
+  <section class="section container" id="telecharger" aria-labelledby="download-title">
+    <div class="section-heading"><div><p class="eyebrow">04 / À VOUS DE JOUER</p><h2 id="download-title">Votre prochain devis<br>commence ici.</h2></div><p>Installez le complément Excel, puis ajoutez le connecteur si vous utilisez Archicad. Le guide vous accompagne à chaque étape.</p></div>
+    <div class="download-grid"><article class="download-card primary-download"><div class="download-top"><span class="step">1</span><span class="pill available">Le point de départ</span></div><h3>EstimLink pour Excel</h3><p>Le programme d’installation du complément pour votre poste Windows.</p><p class="version">VERSION 1.3.0 · WINDOWS · ENV. 2,5 Mo</p><a class="button" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.0/EstimLink-Excel-Setup.exe">Télécharger pour Excel <span aria-hidden="true">↓</span></a><a class="text-link" href="/docs.html#excel">Guide d’installation Excel ↗</a></article><article class="download-card"><div class="download-top"><span class="step">2</span><span class="pill">Optionnel</span></div><h3>Connecteur Archicad</h3><p>L’agent local avec Tapir pour relier Archicad 27, 28 ou 29 à EstimLink.</p><p class="version">VERSION 1.3.1 · WINDOWS · ENV. 47,5 Mo</p><a class="button secondary" href="https://github.com/Moham025/-EstimLink-site/releases/download/v1.3.1/EstimLink-for-Archicad-Setup.exe">Télécharger le connecteur <span aria-hidden="true">↓</span></a><a class="text-link" href="/docs.html#archicad">Installation et réparation Tapir ↗</a></article></div>
+    <div class="web-download"><span><strong>Vous utilisez Excel sur le web ?</strong> Chargez le manifeste selon les autorisations de votre organisation.</span><a href="/download/EstimLink-manifest.xml" download="EstimLink-manifest.xml">Télécharger le manifeste ↓</a></div>
+    <p class="small-print">Les programmes sont distribués via GitHub Releases. Consultez le <a href="/docs.html">guide et les prérequis</a> avant l’installation.</p>
+  </section>
+  <section class="faq-section container" aria-labelledby="faq-title"><div><p class="eyebrow">LES RÉPONSES ESSENTIELLES</p><h2 id="faq-title">Avant de commencer.</h2></div><div class="faq-list">
+    <details><summary>Faut-il installer Archicad pour utiliser EstimLink ?</summary><p>Non. Le complément Excel est le point de départ. Le connecteur Archicad est optionnel et concerne les utilisateurs qui souhaitent exploiter leurs maquettes.</p></details>
+    <details><summary>Comment installer le complément ?</summary><p>Sous Windows, téléchargez l’installateur Excel et suivez le <a href="/docs.html#excel">guide pas à pas</a>. Pour Excel sur le web, utilisez le manifeste si votre organisation autorise le chargement de compléments.</p></details>
+    <details><summary>LinkSearch est-il déjà disponible ?</summary><p>Pas encore en tant que mini-complément autonome. LinkSearch est un projet dédié à la recherche de désignations et de prix. EstimLink reste le complément complet disponible au téléchargement.</p></details>
+    <details><summary>Peut-on déjà se connecter à une API NGNIOR Link ?</summary><p>L’offre publique API/MCP de NGNIOR Link est en projet. Contactez-nous pour discuter d’un besoin d’intégration. Le connecteur local Archicad d’EstimLink dispose, lui, d’un installateur publié.</p></details>
+    <details><summary>Quels sont les tarifs et les limites d’usage ?</summary><p>Les conditions commerciales, quotas et fonctionnalités incluses sont à confirmer avec NGNIOR CONCEPTION. <a href="mailto:sanou.moham92@gmail.com?subject=EstimLink%20-%20Conditions%20d%E2%80%99acc%C3%A8s">Demandez les conditions d’accès</a> correspondant à votre besoin.</p></details>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="#top"><img src="/assets/brand-mark.svg" width="40" height="40" alt=""><span>Estim<span class="brand-link">Link</span></span></a><p>Du métré au devis, dans Excel.</p><span class="company-signature">UNE SOLUTION NGNIOR CONCEPTION</span></div><nav aria-label="Liens de pied de page"><a href="#produit">Le complément</a><a href="#ecosysteme">L’écosystème</a><a href="/docs.html">Documentation</a><a href="mailto:sanou.moham92@gmail.com">Nous contacter</a></nav></div><div class="footer-bottom"><span>© 2026 NGNIOR CONCEPTION · EstimLink</span><span>Excel et Archicad sont des marques de leurs propriétaires respectifs.</span></div></div></footer>
 </body>
 </html>
