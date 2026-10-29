@@ -6,18 +6,18 @@
     <title>Documentation — EstimLink</title>
     <meta name="description" content="Guide d'installation et de démarrage rapide de l'add-in Excel EstimLink.">
     <link rel="canonical" href="https://estimlink.ngniorconception.com/docs.html">
-    <link rel="icon" type="image/svg+xml" href="/assets/brand-mark.svg">
+    <link rel="icon" type="image/png" href="/assets/icon-80.png">
     <script src="/site.js" defer></script>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
 <a class="skip-link" href="#contenu">Aller au contenu</a>
-<div class="company-bar"><div class="container"><span>Une solution <strong>NGNIOR CONCEPTION</strong></span><a href="/#ecosysteme">Découvrir l’écosystème ↗</a></div></div>
+<div class="company-bar"><div class="container"><span>Une solution <strong>NGNIOR CONCEPTION</strong></span><a href="/#ecosysteme">Découvrir la v2 ↗</a></div></div>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="EstimLink — accueil"><img src="/assets/brand-mark.svg" width="40" height="40" alt=""><span>Estim<span class="brand-link">Link</span></span></a>
-    <nav class="main-nav" id="navigation" data-menu aria-label="Navigation principale"><a href="/#produit">Le complément</a><a href="/#archicad">Archicad</a><a href="/#ecosysteme">Nos solutions</a><a href="/docs.html">Documentation</a></nav>
+    <a class="brand" href="/" aria-label="EstimLink — accueil"><img src="/assets/icon-80.png" width="40" height="40" alt=""><span>Estim<span class="brand-link">Link</span></span></a>
+    <nav class="main-nav" id="navigation" data-menu aria-label="Navigation principale"><a href="/#produit">Le complément</a><a href="/#archicad">Archicad</a><a href="/#ecosysteme">La version 2</a><a href="/docs.html">Documentation</a></nav>
     <a class="button small header-download" href="/#telecharger">Installer EstimLink <span aria-hidden="true">↗</span></a>
     <button class="menu-button" type="button" data-menu-button aria-controls="navigation" aria-expanded="false" aria-label="Ouvrir ou fermer le menu" hidden><span aria-hidden="true">☰</span></button>
   </div>
@@ -26,7 +26,7 @@
 
 <div class="container doc-layout"><aside class="doc-sidebar" aria-label="Sommaire du guide"><p>GUIDE D’INSTALLATION</p><a href="#excel">01 · Excel Windows</a><a href="#archicad">02 · Connecteur Archicad</a><a href="#web">03 · Excel sur le web</a><a href="#connexion">04 · Connexion</a><a href="#premier-devis">05 · Premier devis</a><a href="#liaison">06 · Liaison Archicad</a><a href="#aide">Besoin d’aide ?</a></aside><main class="doc-wrap" id="contenu">
     <p class="kicker">Documentation</p>
-    <h1>Démarrer avec EstimLink</h1>
+    <h1>Démarrer avec EstimLink</h1><div class="doc-callout"><p><strong>Deux versions à distinguer.</strong> Les téléchargements ci-dessous correspondent à la version publiée. EstimLink 2 est en validation : son agent local compatible est nécessaire pour enregistrer les projets, même sans Archicad. Il n’est pas encore proposé au téléchargement public.</p></div>
     <p>Installez le complément Excel et, si nécessaire, le connecteur Archicad. Une solution NGNIOR CONCEPTION.</p>
 
     <h2 id="excel">1. Installer dans Excel pour Windows (recommandé)</h2>
@@ -79,26 +79,16 @@
         <li>Sélectionnez le fichier téléchargé, puis validez : l'onglet <strong>Estim Link</strong> apparaît dans le ruban.</li>
     </ol>
 
-    <h2 id="connexion">4. Se connecter</h2>
-    <ol>
-        <li>Ouvrez le panneau <strong>Estim Link</strong> depuis le ruban.</li>
-        <li>Connectez-vous avec <strong>Google</strong> ou créez un compte avec votre email.</li>
-        <li>Les options de synchronisation dépendent des fonctionnalités activées pour votre compte. Vérifiez les conditions d’accès avec notre équipe.</li>
-    </ol>
-
-    <h2 id="premier-devis">5. Premier devis en 3 commandes</h2>
-    <p>Dans le chat du panneau, essayez par exemple :</p>
-    <ul>
-        <li><code>Crée une table DQE pour une villa R+1</code> — l'assistant structure les lots et postes.</li>
-        <li><code>Applique les prix de ma bibliothèque</code> — l'Agent Prix rapproche chaque poste d'un prix unitaire.</li>
-        <li><code>Génère le récapitulatif et convertis en bordereau</code> — totaux, montants en lettres, mise en forme.</li>
-    </ul>
-
+    <h2 id="connexion">4. Compte et enregistrement</h2>
+    <p>Dans la version publiée, utilisez les options de connexion proposées par votre volet. Dans la v2 en validation, le travail local est accessible sans compte. Installez et démarrez l’agent compatible v2 avant de travailler : vérifiez le statut « Enregistré ». Un agent ancien ou injoignable ne permet pas l’enregistrement des projets v2.</p>
+    <h2 id="premier-devis">5. Premiers pas dans la v2 en validation</h2>
+    <ol><li>Dans Excel, utilisez les palettes <strong>Titre / Total / Recap / RecapG</strong> pour construire vos lots et récapitulatifs.</li><li>Organisez les feuilles de quantités et leurs formules reliées. Recherchez vos prix dans votre bibliothèque ou dans <strong>Mercurial</strong>, puis choisissez Min, Moy ou Max.</li><li>Vérifiez l’enregistrement dans l’agent local. Utilisez le partage <strong>.estimlink</strong> pour transmettre les éléments souhaités à un collègue.</li></ol>
+    <p>La v2 ne comporte pas de chat intégré au volet. Son serveur MCP se configure séparément avec un agent IA externe compatible.</p>
     <h2 id="liaison">6. Connecter ArchiCAD</h2>
     <p>
         Le connecteur ArchiCAD (étape 2) doit être installé, et Archicad ouvert avec votre projet.
         Depuis l'onglet <strong>ArchiCAD</strong> du panneau, chargez votre maquette : EstimLink résout
-        chaque référence en cascade (correspondance exacte → normalisée → similarité IA)
+        les références de la maquette
         pour injecter les quantités du modèle dans vos postes.
     </p>
 
@@ -106,7 +96,7 @@
     <p>Écrivez-nous : <a href="mailto:sanou.moham92@gmail.com" style="color:var(--accent);">sanou.moham92@gmail.com</a></p>
 </main></div>
 
-<footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="/#top"><img src="/assets/brand-mark.svg" width="40" height="40" alt=""><span>Estim<span class="brand-link">Link</span></span></a><p>Du métré au devis, dans Excel.</p><span class="company-signature">UNE SOLUTION NGNIOR CONCEPTION</span></div><nav aria-label="Liens de pied de page"><a href="/#produit">Le complément</a><a href="/#ecosysteme">L’écosystème</a><a href="/docs.html">Documentation</a><a href="mailto:sanou.moham92@gmail.com">Nous contacter</a></nav></div><div class="footer-bottom"><span>© 2026 NGNIOR CONCEPTION · EstimLink</span><span>Excel et Archicad sont des marques de leurs propriétaires respectifs.</span></div></div></footer>
+<footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="/#top"><img src="/assets/icon-80.png" width="40" height="40" alt=""><span>Estim<span class="brand-link">Link</span></span></a><p>Du métré au devis, dans Excel.</p><span class="company-signature">UNE SOLUTION NGNIOR CONCEPTION</span></div><nav aria-label="Liens de pied de page"><a href="/#produit">Le complément</a><a href="/#ecosysteme">La version 2</a><a href="/docs.html">Documentation</a><a href="mailto:sanou.moham92@gmail.com">Nous contacter</a></nav></div><div class="footer-bottom"><span>© 2026 NGNIOR CONCEPTION · EstimLink</span><span>Excel et Archicad sont des marques de leurs propriétaires respectifs.</span></div></div></footer>
 
 
 </body>
